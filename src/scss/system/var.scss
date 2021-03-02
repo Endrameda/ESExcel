@@ -1,0 +1,27 @@
+// Fonts
+$baseFont: sans-serif;
+$mainFont: 'Roboto', $baseFont;
+
+// Blocks height
+$headerHeight: 34px;
+$toolbarHeight: 40px;
+$formulaHeight: 24px;
+$dbHeaderHeight: 64px;
+
+$tableTop: $headerHeight + $toolbarHeight + $formulaHeight;
+
+// Border Colors
+$borderColor: #e1e1e1;
+$blueBorderColor: #1a73e8;
+$blue2: #5b86fc;
+
+// Table proporties
+$infoCellWidth: 40px;
+$rowHeight: 24px;
+$cellWidth: 120px;
+
+// Colors
+$black: #000;
+$white: #fff;
+$white2: #f8f9fa;
+$gray: #888;

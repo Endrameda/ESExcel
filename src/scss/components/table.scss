@@ -1,0 +1,103 @@
+.excel__table {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $tableTop;
+  overflow: auto;
+  height: calc(100vh - 98px);
+  padding-bottom: 2px;
+
+  .row {
+    display: flex;
+    min-height: 20px;
+    height: $rowHeight;
+
+    &:first-child {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+  }
+
+  .row-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: $infoCellWidth;
+    height: 100%;
+    border: 1px solid $borderColor;
+    border-top: none;
+    background-color: $white2;
+    user-select: none;
+    position: sticky;
+    left: 0;
+  }
+
+  .row-resize {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 4px;
+    background-color: $blue2;
+    cursor: row-resize;
+    opacity: 0;
+    z-index: 1000;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  .row-data {
+    display: flex;
+  }
+
+  .column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white2;
+    min-width: 40px;
+    width: $cellWidth;
+    border: 1px solid $borderColor;
+    border-top: none;
+    border-left: none;
+    position: relative;
+    user-select: none;
+  }
+
+  .col-resize {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    bottom: 0;
+    width: 4px;
+    background-color: $blue2;
+    cursor: col-resize;
+    opacity: 0;
+    z-index: 1000;
+
+    &:hover {
+      opacity: 1 !important;
+    }
+  }
+
+  .cell {
+    min-width: 40px;
+    width: $cellWidth;
+    border: 1px solid #eaeaea;
+    border-top: none;
+    border-left: none;
+    height: 100%;
+    padding: 4px;
+    color: $black;
+    outline: none;
+
+    &.selected {
+      z-index: 2;
+      outline: 2px solid $blue2;
+      border-color: transparent;
+    }
+  }
+}
